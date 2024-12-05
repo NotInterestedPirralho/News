@@ -21,3 +21,9 @@ fun Date.toYYYYMMDD() : String {
     return SimpleDateFormat(pattern, Locale.getDefault())
         .format(this)
 }
+
+fun Date.toServerDate() : String {
+    val pattern = "yyyy-MM-dd'T'HH:mm:ss'Z'"
+    return SimpleDateFormat(pattern, Locale.getDefault())
+        .format(this)
+}

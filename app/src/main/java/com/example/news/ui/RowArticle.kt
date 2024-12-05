@@ -1,4 +1,4 @@
-package com.example.news
+package com.example.news.ui
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Column
@@ -20,7 +20,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil3.compose.AsyncImage
 import com.example.news.R
-import com.example.news.Article
+import com.example.news.models.Article
 import com.example.news.toYYYYMMDD
 import com.example.news.ui.theme.NewsTheme
 import java.util.Date
@@ -46,7 +46,7 @@ fun RowArticle(modifier: Modifier = Modifier, article: Article) {
                     .width(120.dp)
                     .clip(RoundedCornerShape(8.dp))
                     .padding(6.dp),
-                painter = painterResource(id = R.mipmap.img_place_holder),
+                painter = painterResource(id = R.mipmap.ic_launcher),
                 contentDescription = "image article",
                 contentScale = ContentScale.Crop,
             )

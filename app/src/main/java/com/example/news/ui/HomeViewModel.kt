@@ -1,10 +1,7 @@
-package com.example.news
+package com.example.news.ui
 
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
-import com.example.news.Article
+import com.example.news.models.Article
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
@@ -23,20 +20,17 @@ data class ArticlesState (
 )
 
 class HomeViewModel : ViewModel() {
-
     private val _uiState = MutableStateFlow(ArticlesState())
     val uiState : StateFlow<ArticlesState> = _uiState.asStateFlow()
 
     fun fetchArticles() {
-
         _uiState.value = ArticlesState(
             isLoading = true,
             error = null)
 
         val client = OkHttpClient()
-
         val request = Request.Builder()
-            .url("https://newsapi.org/v2/top-headlines?country=us&apiKey=2446760b546e4ec3951bcac502943954")
+            .url("https://newsapi.org/v2/top-headlines?country=us&apiKey=1765f87e4ebc40229e80fd0f75b6416c")
             .build()
 
         client.newCall(request).enqueue(object : Callback {
@@ -70,5 +64,4 @@ class HomeViewModel : ViewModel() {
             }
         })
     }
-
 }
