@@ -1,7 +1,6 @@
 package com.example.news.database
 
 import androidx.room.TypeConverter
-import java.net.URLEncoder
 import java.text.SimpleDateFormat
 import java.util.Date
 import java.util.Locale

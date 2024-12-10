@@ -18,7 +18,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
 import com.example.news.Screen
-import com.example.news.encodeURL
 import com.example.news.models.Article
 import com.example.news.ui.theme.NewsTheme
 
