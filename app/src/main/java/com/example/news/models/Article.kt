@@ -20,7 +20,6 @@ class Article (var title: String? = null,
                @PrimaryKey
                var url: String,
                var publishedAt: Date? = null) {
-
     companion object {
         fun fromJson(json: JSONObject): Article {
             return Article(

@@ -89,6 +89,6 @@ class MainActivity : ComponentActivity() {
 
 sealed class Screen(val route: String) {
     object Home : Screen("home")
-    object ArticleDetail : Screen("article_detail/{articleUrl}")
-
+    object Favorites : Screen("favorites")
+    object ArticleDetail : Screen("article_detail/{article}")
 }

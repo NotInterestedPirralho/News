@@ -33,6 +33,7 @@ fun MyBottomBar(
     navController: NavController
 ){
     var selectedIndex by rememberSaveable { mutableIntStateOf(0) }
+
     var items = listOf(
         BottomNavigationItem(
             title = "Home",

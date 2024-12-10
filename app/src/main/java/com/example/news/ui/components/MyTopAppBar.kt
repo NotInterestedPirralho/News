@@ -63,6 +63,7 @@ fun MyTopAppBar(
                 IconButton(
                     onClick = {
                         // TODO: share article
+
                     }
                 ) {
                     Icon(
